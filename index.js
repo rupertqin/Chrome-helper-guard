@@ -3,12 +3,17 @@ const { exec } = require('child_process')
 const command = "ps -acxo pid,ppid,pcpu,pmem,vsz,rss,state,command -r | grep 'Google Chrome Helper'"
 const limitMem = 200000
 
-exec(command, (err, stdout, stderr) => {
-  console.log(stdout)
-  const processes = parseLines(stdout)
-  killFatHelper(processes)
-});
+guard()
+setInterval(guard, 60 * 1000)
 
+
+function guard() {
+  exec(command, (err, stdout, stderr) => {
+    console.log(stdout)
+    const processes = parseLines(stdout)
+    killFatHelper(processes)
+  });
+}
 
 function parseLines(str) {
   const lines = str.split(/\r?\n/)
