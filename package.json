@@ -1,0 +1,26 @@
+{
+  "name": "chrome-helper-guard",
+  "version": "0.0.1",
+  "description": "chrome helper memory guard",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rupertqin/Chrome-helper-guard.git"
+  },
+  "keywords": [
+    "chrome",
+    "helper",
+    "memory",
+    "guard"
+  ],
+  "author": "rupert",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rupertqin/Chrome-helper-guard/issues"
+  },
+  "homepage": "https://github.com/rupertqin/Chrome-helper-guard#readme"
+}
